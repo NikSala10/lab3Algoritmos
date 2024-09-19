@@ -6,7 +6,7 @@ export enum Attribute  {
     'gender' = 'gender',
     'area' = 'area',
     'position' = 'position',
-    'time' = 'time',
+    'timeInCompany' = 'timeInCompany',
     'experience' = 'experience',
 }
 
@@ -18,7 +18,7 @@ class Filter extends HTMLElement  {
     gender?: string;
     area?: string;
     position?: string;
-    time?: number;
+    timeInCompany?: number;
     experience?: number;
 
     constructor()  {
@@ -31,7 +31,7 @@ class Filter extends HTMLElement  {
     }
 
     attributeChangedCallback(propName : Attribute, oldValue: string | undefined, newValue: string | undefined) {
-        console.log(`Attribute changed: ${propName} - New Value: ${newValue}`);
+        
         switch (propName) {
             case Attribute.uid:
                 this.uid = newValue ? Number(newValue) : undefined;
@@ -39,8 +39,8 @@ class Filter extends HTMLElement  {
             case Attribute.age:
                 this.age = newValue ? Number(newValue) : undefined;
                 break;
-            case Attribute.time:
-                this.time = newValue ? Number(newValue) : undefined;
+            case Attribute.timeInCompany:
+                this.timeInCompany = newValue ? Number(newValue) : undefined;
                 break;
             case Attribute.experience:
                 this.experience = newValue ? Number(newValue) : undefined;
@@ -60,9 +60,16 @@ class Filter extends HTMLElement  {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-            <p>${this.name ? this.name : 'not found'}</p>
-            <p>${this.uid ? this.uid : 'noy found'}</p>
-            
+            <link rel="stylesheet" href="/component.css">
+            <img id="img" src="${this.image ? this.image : 'Not found'}">
+            <h1>${this.name ? this.name : 'Not found'}</h1>
+            <p>ID: ${this.uid ? this.uid : 'Not found'}</p>
+            <p>Age: ${this.age ? this.age : 'Not found'}</p>
+            <p>Gneder: ${this.gender ? this.gender : 'Not found'}</p>
+            <p>Area: ${this.area ? this.area : 'Not found'}</p>     
+            <p>Position: ${this.position ? this.position : 'Not found'}</p>
+            <p>Time in Company: ${this.timeInCompany ? this.timeInCompany : 'Not found'}</p>
+            <p>Experience: ${this.experience ? this.experience : 'Not found'}</p>
             `;
         }
     }
