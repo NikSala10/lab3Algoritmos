@@ -15,7 +15,7 @@ class AppContainer extends HTMLElement  {
             workerFilter.setAttribute(Attribute.gender, worker.gender);
             workerFilter.setAttribute(Attribute.area, worker.jobDetails.area);
             workerFilter.setAttribute(Attribute.position, worker.jobDetails.position);
-            workerFilter.setAttribute(Attribute.timeInCompany, String(worker.jobDetails.timeInCompany));
+            workerFilter.setAttribute(Attribute.timeincompany, String(worker.jobDetails.timeInCompany));
             workerFilter.setAttribute(Attribute.experience, String(worker.jobDetails.experience));
             this.workersList.push(workerFilter);
         })
