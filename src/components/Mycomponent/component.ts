@@ -61,15 +61,23 @@ class Filter extends HTMLElement  {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="../src/components/myComponent/component.css">
-            <img id="img" src="${this.image ? this.image : 'Not found'}">
-            <h1>${this.name ? this.name : 'Not found'}</h1>
-            <p>ID: ${this.uid ? this.uid : 'Not found'}</p>
-            <p>Age: ${this.age ? this.age : 'Not found'}</p>
-            <p>Gneder: ${this.gender ? this.gender : 'Not found'}</p>
-            <p>Area: ${this.area ? this.area : 'Not found'}</p>     
-            <p>Position: ${this.position ? this.position : 'Not found'}</p>
-            <p>Time in Company: ${this.timeincompany ? this.timeincompany : 'Not found'}</p>
-            <p>Experience: ${this.experience ? this.experience : 'Not found'}</p>
+           
+                <div class= "cardWorker">
+                    <div id="image">
+                        <img id="img" src="${this.image ? this.image : 'Not found'}">
+                    </div>
+                    <div class="content">
+                        <h1>${this.name ? this.name : 'Not found'}</h1>
+                        <p><b>ID:</b> ${this.uid ? this.uid : 'Not found'}</p>
+                        <p><b>Age:</b> ${this.age ? this.age : 'Not found'}</p>
+                        <p><b>Gender:</b> ${this.gender ? this.gender : 'Not found'}</p>
+                        <p><b>Area:</b> ${this.area ? this.area : 'Not found'}</p>     
+                        <p><b>Position:</b> ${this.position ? this.position : 'Not found'}</p>
+                        <p><b>Time in Company:</b> ${this.timeincompany ? this.timeincompany : 'Not found'} years</p>
+                        <p><b>Experience:</b> ${this.experience ? this.experience : 'Not found'} years</p>
+                    </div>
+                </div>
+          
             `;
         }
     }

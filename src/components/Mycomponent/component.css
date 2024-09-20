@@ -1,6 +1,61 @@
-#img  {
-    width: 30%;
-    height: 30%; 
-    border-radius: 50%; 
-    
+.cardWorker  {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px #abd1dcda;
+    border-radius: 25px;
+    padding: 2rem;
+    width: 400px;
+    bottom: 2rem;
+    margin-bottom: 1rem; 
 }
+.cardWorker:hover {
+	box-shadow: 0px 4px 10px #7097a8bf;
+}
+#image  {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.content  {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.content b  {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.content h1  {
+    color: #0A1453;
+}
+
+
+/* abuelo */
+#title  {
+    color: #0A1453;
+    text-align: center;
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+}
+ .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    gap: 5rem;
+    margin-bottom: 5rem;
+ }

@@ -30,6 +30,8 @@ class AppContainer extends HTMLElement  {
     render()  {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="../src/components/myComponent/component.css">
+            <h1 id="title">WORKERS</h1>
             <div class="container"></div>
             `;
 
